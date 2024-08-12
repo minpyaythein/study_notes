@@ -1,6 +1,6 @@
 # AWS Solution Architect Exam Study Notes
 
-Suitable for HPC?
+Networking Devices suitable for HPC?
 Elastic Fabric Adapter > Elastic Network Adapter > Elastic Network Interface (Most basic)
 
 Shared Storage Space for windows-based application which is to move from on-premises data center to cloud
