@@ -55,3 +55,44 @@ Use AWS Volume Gateway - Cached Volume - to store the most frequently accessed l
 #### Automate and accelerate online data transfers to these AWS storage services
 
 Use AWS DataSync
+
+#### Confirm that requests are not sent to the unhealthy or deregistering instances
+
+Connection Draining
+
+#### Correct Configuration for IPSec VPN Connection to move from OP DC to AWS Cloud
+
+Virtual Private Gateway (VGW) on AWS side and Customer Gateway on the on-premises
+
+#### Automatically recover EC2 instances if impaired
+
+A recovered one is identical to the original (instance ID, private and elastic IP, instance metadata) and retains the public IPv4 address.
+(The recover action is supported only on instances that have Amazon EBS volumes configured on them, instance store volumes are not supported for automatic recovery by Amazon CloudWatch alarms.)
+
+#### Customers can access Amazon SQS from Amazon VPC using VPC endpoints, without using public IPs, and without needing to traverse the public internet. (VPC endpoints for Amazon SQS are powered by AWS PrivateLink)
+
+#### AWS PrivateLink enables to connect VPC to AWS services.
+
+#### Amazon SQS provides short polling and long polling to receive messages from a queue. By default, queues use short polling. With short polling, Amazon SQS sends the response right away, even if the query found no messages. With long polling, Amazon SQS sends a response after it collects at least one available message, up to the maximum number of messages specified in the request. Amazon SQS sends an empty response only if the polling wait time expires. Long polling makes it inexpensive to retrieve messages from your Amazon SQS queue as soon as the messages are available. Using long polling can reduce the cost of using SQS because you can reduce the number of empty receives.
+
+#### Visibility timeout is a period during which Amazon SQS prevents other consumers from receiving and processing a given message.
+
+#### Use Amazon Kinesis Data Streams to process the data streams as well as decouple the producers and consumers for the real-time data processor
+
+#### Use Amazon GuardDuty to monitor any malicious activity on data stored in Amazon S3. Use Amazon Macie to identify any sensitive data stored on Amazon S3
+
+#### Configure AWS Auto Scaling to scale out the Amazon ECS cluster when the ECS service's CPU utilization rises above a threshold (NOT Cloudwatch)
+
+#### Schedule a weekly Amazon EventBridge event cron expression to invoke an AWS Lambda function that runs the database rollover job
+
+#### Use AWS Config to review resource configurations to meet compliance guidelines and maintain a history of resource configuration changes
+
+#### The orders booked in one AWS Region should be visible to all AWS Regions in a second or less. The database should be able to facilitate failover with a short Recovery Time Objective (RTO).
+
+Amazon Aurora Global Database is cheaper than DynamoDB global tables which also have no failover concept.
+
+#### Service control policy (SCP)
+
+SCP controls over IAM permission policy, affects all users and accounts including root user but not service-linked roles
+
+#### Alias Record for Route 53 for the top node of a DNS namespace
