@@ -96,3 +96,21 @@ Amazon Aurora Global Database is cheaper than DynamoDB global tables which also 
 SCP controls over IAM permission policy, affects all users and accounts including root user but not service-linked roles
 
 #### Alias Record for Route 53 for the top node of a DNS namespace
+
+#### Want to use NLB for millions of requests per second
+
+Traffic is routed to instances using primary private IP addresses
+
+#### Create inbound and outbound endpoints for resolving DNS of AWS and on-premises.
+
+#### Sharing a VPC is difficult but subnets by VPC Sharing
+
+#### AWS DMS can also replicate data from a database into Amazon Redshift
+
+#### VPC Gateway endpoints provide reliable connectivity to Amazon S3 without requiring an internet gateway or a NAT device for your VPC.
+
+#### AMI can be shared with another account across regions
+
+#### A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+
+#### If you have multiple AWS Site-to-Site VPN connections, you can provide secure communication between sites using the AWS VPN CloudHub. This enables your remote sites to communicate with each other, and not just with the VPC.
