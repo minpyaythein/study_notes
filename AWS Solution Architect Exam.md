@@ -123,6 +123,8 @@ Traffic is routed to instances using primary private IP addresses
 
 Set up three NAT gateways, one in each public subnet in each AZ. Create a custom route table for each AZ that forwards non-local traffic to the NAT gateway in its AZ
 
+#### An Internet Gateway serves two purposes: to provide a target in your VPC route tables for internet-routable traffic and to perform network address translation (NAT) for instances that have been assigned public IPv4 addresses.
+
 #### The database backend for a retail company's website is hosted on Amazon RDS for MySQL having a primary instance and three read replicas to support read scalability. The company has mandated that the read replicas should lag no more than 1 second behind the primary instance to provide the best possible user experience
 
 Set up database migration from Amazon RDS MySQL to Amazon Aurora MySQL. Swap out the MySQL read replicas with Aurora Replicas. Configure Aurora Auto Scaling
@@ -162,10 +164,30 @@ Use Availability Zone (AZ) ID to uniquely identify the Availability Zones across
 File Gateway Configuration of AWS Storage Gateway
 Amazon FSx for Windows File Server
 
-#### With cross-zone load balancing enabled, one instance in Availability Zone A receives 20% traffic and four instances in Availability Zone B receive 20% traffic each. With cross-zone load balancing disabled, one instance in Availability Zone A receives 50% traffic and four instances in Availability Zone B receive 12.5% traffic each
+#### With cross-zone load balancing enabled, one instance in Availability Zone A receives 20% traffic and four instances in Availability Zone B receive 20% traffic each. With cross-zone load balancing disabled, one instance in Availability Zone A receives 50% traffic and four instances in Availability Zone B receive 12.5% traffic each.
 
 #### Use Amazon DynamoDB point in time recovery to restore the table to the state just before corrupted data was written
 
 #### When you enable PITR, DynamoDB backs up your table data automatically with per-second granularity. Thus, it helps with accidental writes and deletes.
 
 #### Amazon DynamoDB Streams captures a time-ordered sequence of item-level modifications in any Amazon DynamoDB table and stores this information in a log for up to 24 hours.
+
+#### Amazon CloudFront provides two ways to send authenticated requests to an Amazon S3 origin: origin access control (OAC) and origin access identity (OAI).
+
+Configure Amazon CloudFront to send authenticated requests to Amazon S3, and configure Amazon S3 to only allow access to authenticated requests from Amazon CloudFront.
+
+Create an AWS WAF ACL and use an IP match condition to allow traffic only from those IPs that are allowed in the Amazon EC2 security group. Associate this new AWS WAF ACL with the Amazon CloudFront distribution
+
+#### Use AWS Global Accelerator to provide a low latency way to distribute live sports results for UDP connection. (For HTTP connection, CloudFront may be better.)
+
+#### The app is very slow when the business reports are run on RDS DB.
+
+Create a read replica and connect the report generation tool or app to it
+
+#### Read cannot be done from the standby DB.
+
+#### CNAME records can be used to map one domain name to another but not for the top node of a DNS namespace.
+
+#### Route 53 charges CNAME records but alias records.
+
+#### Amazon SQS lets you decouple application components so that they run and fail independently, increasing the overall fault tolerance of the system.
