@@ -191,3 +191,117 @@ Create a read replica and connect the report generation tool or app to it
 #### Route 53 charges CNAME records but alias records.
 
 #### Amazon SQS lets you decouple application components so that they run and fail independently, increasing the overall fault tolerance of the system.
+
+#### DynamoDB has two read/write capacity modes: on-demand and provisioned.
+
+#### ELB can be configured for host-based routing to support multiple subdomains and different top-level domains.
+
+#### AWS Site-to-Site VPN connections are used for secure connectivity to its AWS cloud resources from its on-premises DC.
+
+If users are experiencing slower VPN connectivity, AWS Transit Gateway with equal cost multipath routing and add additional VPN tunnels
+
+#### Access control lists (ACLs) are service policies that allow you to control which principals in another account can access a resource.
+
+#### A permissions boundary is an advanced feature for using a managed policy to set the maximum permissions that an identity-based policy can grant to an IAM entity.
+
+#### SCPs are JSON policies that specify the maximum permissions for an organization or organizational unit (OU). The SCP limits permissions for entities in member accounts, including each AWS account root user. An explicit deny in any of these policies overrides the allow.
+
+#### Resource-based policies are JSON policy documents that you attach to a resource such as an Amazon S3 bucket.
+
+#### The IAM service supports only one type of resource-based policy called a role trust policy, which is attached to an IAM role.
+
+#### Trust policies define which principal entities (accounts, users, roles, and federated users) can assume the role. An IAM role is both an identity and a resource that supports resource-based policies.
+
+#### AWS CloudFormation allows you to keep your infrastructure as code and re-use the best practices around your company for configuration parameters.
+
+#### Amazon ElastiCache Redis is used and a disaster recovery strategy for its caching layer that gives minimal downtime and data loss is necessary.
+
+Opt for Multi-AZ configuration with automatic failover functionality to help mitigate failure
+
+#### To facilitate the hosting of Docker containers, the company is looking at various orchestration services.
+
+Amazon EKS and ECS with Fargate for serverless orchestration of the containerized services
+
+#### Select a cluster placement group while launching EC2 instances for high network throughput and low-latency network performance with tightly coupled node-to-node communication.
+
+#### When you create an AWS Elastic Beanstalk environment, you can specify an Amazon Machine Image (AMI) to use instead of the standard Elastic Beanstalk AMI included in your platform version.
+
+Create a Golden Amazon Machine Image (AMI) with the static installation components already setup
+Use Amazon EC2 user data to customize the dynamic installation parts at boot time
+
+#### Disaster Recovery Strategy leveraging AWS Cloud
+
+Multi-Site > Warm Standby > Pilot Light > Backup and Restore
+Backup and Restore: In most traditional environments, data is backed up to tape and sent off-site regularly. If you use this method, it can take a long time to restore your system in the event of a disruption or disaster.
+Pilot Light: The term pilot light is often used to describe a DR scenario in which a minimal version of an environment is always running in the cloud. With AWS you can maintain a pilot light by configuring and running the most critical core elements of your system in AWS.
+Warm Standby: The term warm standby is used to describe a DR scenario in which a scaled-down version of a fully functional environment is always running in the cloud. A warm standby solution extends the pilot light elements and preparation.
+Multi-Site: A multi-site solution runs in AWS as well as on your existing on-site infrastructure, in an active-active configuration.
+
+#### To reduce costs and for read-heavy operations of an app using API Gateway, Lambda and Aurora DB.
+
+You can enable Amazon API caching in Amazon API Gateway to cache your endpoint's responses. With caching, you can reduce the number of calls made to your endpoint and also improve the latency of requests to your API. When you enable caching for a stage, API Gateway caches responses from your endpoint for a specified time-to-live (TTL) period, in seconds.
+
+#### To copy a petabyte of data from on-premises DC to a S3 bucket
+
+Copy data from the source bucket to the destination bucket using the aws S3 sync command
+Set up Amazon S3 batch replication to copy objects across Amazon S3 buckets in another Region using S3 console and then delete the replication configuration
+
+#### Migrating the application consisting of application servers and a Microsoft SQL Server database from on-premises to AWS.
+
+Migrate the data to Amazon RDS for SQL Server database in a Multi-AZ deployment
+
+#### Costs are too high for startup app using EC2 instances, RDS instances and S3.
+
+Use AWS Cost Explorer Resource Optimization to get a report of Amazon EC2 instances that are either idle or have low utilization and use AWS Compute Optimizer to look at instance type recommendations
+
+#### Decoupling the architecture of a SaaS app with in-house and 3rd-party apps.
+
+Use Amazon EventBridge to decouple the system architecture.
+Amazon SQS cannot be integrated with 3rd-party SaaS services.
+
+#### Adding read replicas would further add to the database costs and will not help in reducing latency when compared to a caching solution. Caching is the solution.
+
+#### Across regions have multiple ALBs and it is necessary to allow IP addresses of the ALBs in on-premises.
+
+Use Global Accelerator. Register the Application Load Balancers in different Regions to the AWS Global Accelerator. Configure the on-premises firewall's rule to allow static IP addresses associated with the AWS Global Accelerator
+
+#### Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message brokers in the cloud. Message brokers allow different software systems–often using different programming languages, and on different platforms–to communicate and exchange information.
+
+Connecting your current applications to Amazon MQ is easy because it uses industry-standard APIs and protocols for messaging, including JMS, NMS, AMQP, STOMP, MQTT, and WebSocket.
+
+#### There are two types of VPC endpoints: Interface Endpoints and Gateway Endpoints. 
+
+An Interface Endpoint is an Elastic Network Interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service.
+
+A Gateway Endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service. The following AWS services are supported: Amazon S3 and Amazon DynamoDB.
+
+#### Wants a capability to dynamically alter the size of a geographic area from which traffic is routed to a specific server resource.
+
+Geoproximity routing lets Amazon Route 53 route traffic to your resources based on the geographic location of your users and your resources. You can also optionally choose to route more traffic or less to a given resource by specifying a value, known as a bias. A bias expands or shrinks the size of the geographic region from which traffic is routed to a resource.
+
+#### The CTO wants to re-engineer a monolithic app towards microservices architecture and expose their application from the same load balancer, linked to different target groups with different URLs: checkout.mycorp.com, www.mycorp.com, yourcorp.com/profile and yourcorp.com/search. The CTO would like to expose all these URLs as HTTPS endpoints for security purposes.
+
+Use Secure Sockets Layer certificate (SSL certificate) with SNI
+SNI supports the use of more than one certificate with the same ALB.
+
+#### A music-sharing company uses a Network Load Balancer to direct traffic to 5 Amazon EC2 instances managed by an Auto Scaling group. When a very popular song is released, the Auto Scaling Group scales to 100 instances and the company incurs high network and compute fees.
+
+#### Amazon CloudFront
+
+Amazon CloudFront can route to multiple origins based on the content type
+Use an origin group with primary and secondary origins to configure Amazon CloudFront for high-availability and failover
+Use field level encryption in Amazon CloudFront to protect sensitive data for specific content
+
+#### The development team has updated the Amazon Route 53 simple record to point "myapp.mydomain.com" from the old Load Balancer to the new one. The users are still not redirected to the new Load Balancer.
+
+The Time To Live (TTL) is still in effect.
+
+#### A healthcare company is evaluating storage options on Amazon S3 to meet regulatory guidelines. The data should be stored in such a way on Amazon S3 that it cannot be deleted until the regulatory time period has expired.
+
+Use Amazon S3 Object Lock
+Amazon S3 Object Lock is an Amazon S3 feature that allows you to store objects using a write once, read many (WORM) model. You can use WORM protection for scenarios where it is imperative that data is not changed or deleted after it has been written. 
+
+#### Amazon S3 Glacier Vault Lock
+
+A vault is a container for storing archives on Glacier. When you create a vault, you specify a vault name and the AWS Region in which you want to create the vault. Since Vault Lock is only for Glacier and not for Amazon S3, so it cannot be used for the given use-case.
+It is for data backup and archival.
