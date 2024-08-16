@@ -309,3 +309,41 @@ It is for data backup and archival.
 #### To whitelist an IP, NLB is useful. To whitelist a DNS or URL, ALB can be used.
 
 #### To transition objects of certain group to S3, a prefix can be used.
+
+#### Both AWS Snowball Edge Storage Optimized and AWS Snowball Edge Compute Optimized offer the storage clustering feature.
+
+#### Amazon EC2 user data cannot be used to install the app.
+
+#### AWS DMS enables you to seamlessly migrate data from supported sources to relational databases, data warehouses, streaming platforms, and other data stores in AWS cloud. It allows to stream the existing data files as well as any ongoing file updates from Amazon S3 to Amazon Kinesis Data Streams.
+
+#### Amazon DynamoDB Streams will contain a stream of all the changes that happen to an Amazon DynamoDB table. It can be chained with an AWS Lambda function that will be triggered to react to these changes, one of which is the developer's milestone.
+
+#### The company wants a dedicated private connection between the on-premise data center and AWS. In case of failures though, the company needs to guarantee uptime and is willing to use the public internet for an encrypted connection.
+
+Use AWS Direct Connect connection as a primary connection and AWS Site-to-Site VPN as a backup connection.
+
+#### IAM database authentication works with MySQL and PostgreSQL. With this authentication method, you don't need to use a password when you connect to a database instance. Instead, you use an authentication token.
+
+#### The bucket policies are for managing permissions for users in their own AWS account and users in other AWS accounts.
+
+#### The user policies are for managing permissions for users in their own AWS account and NOT for users in other AWS accounts.
+
+#### AWS Secrets Manager enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle
+
+#### The database uses AWS Key Management Service (AWS KMS) for encrypting data at rest. SSL is used for data in transit.
+
+#### If you intend to reuse code in more than one AWS Lambda function, you should consider creating an AWS Lambda Layer for the reusable code
+
+#### Since AWS Lambda functions can scale extremely quickly, it's a good idea to deploy a Amazon CloudWatch Alarm that notifies your team when function metrics such as ConcurrentExecutions or Invocations exceeds the expected threshold
+
+#### By default, AWS Lambda functions always operate from an AWS-owned VPC and hence have access to any public internet address or public AWS APIs. Once an AWS Lambda function is VPC-enabled, it will need a route through a Network Address Translation gateway (NAT gateway) in a public subnet to access public resources.
+
+#### A Lambda function should only be VPC-enabled when necessary to interact with a private resource or subnet.
+
+#### Amazon EBS
+
+SSD-backed volumes optimized for transactional workloads involving frequent read/write operations with small I/O size, where the dominant performance attribute is IOPS.
+HDD-backed volumes optimized for large streaming workloads where throughput (measured in MiB/s) is a better performance measure than IOPS.
+Provisioned IOPS SSD (io1) volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads, that are sensitive to storage performance and consistency.
+
+#### AWS Transit Gateway can be used to connect the Amazon VPCs to the on-premises networks.
