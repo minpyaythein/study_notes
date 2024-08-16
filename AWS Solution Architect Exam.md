@@ -269,7 +269,7 @@ Use Global Accelerator. Register the Application Load Balancers in different Reg
 
 Connecting your current applications to Amazon MQ is easy because it uses industry-standard APIs and protocols for messaging, including JMS, NMS, AMQP, STOMP, MQTT, and WebSocket.
 
-#### There are two types of VPC endpoints: Interface Endpoints and Gateway Endpoints. 
+#### There are two types of VPC endpoints: Interface Endpoints and Gateway Endpoints.
 
 An Interface Endpoint is an Elastic Network Interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service.
 
@@ -299,9 +299,13 @@ The Time To Live (TTL) is still in effect.
 #### A healthcare company is evaluating storage options on Amazon S3 to meet regulatory guidelines. The data should be stored in such a way on Amazon S3 that it cannot be deleted until the regulatory time period has expired.
 
 Use Amazon S3 Object Lock
-Amazon S3 Object Lock is an Amazon S3 feature that allows you to store objects using a write once, read many (WORM) model. You can use WORM protection for scenarios where it is imperative that data is not changed or deleted after it has been written. 
+Amazon S3 Object Lock is an Amazon S3 feature that allows you to store objects using a write once, read many (WORM) model. You can use WORM protection for scenarios where it is imperative that data is not changed or deleted after it has been written.
 
 #### Amazon S3 Glacier Vault Lock
 
 A vault is a container for storing archives on Glacier. When you create a vault, you specify a vault name and the AWS Region in which you want to create the vault. Since Vault Lock is only for Glacier and not for Amazon S3, so it cannot be used for the given use-case.
 It is for data backup and archival.
+
+#### To whitelist an IP, NLB is useful. To whitelist a DNS or URL, ALB can be used.
+
+#### To transition objects of certain group to S3, a prefix can be used.
