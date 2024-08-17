@@ -347,3 +347,15 @@ HDD-backed volumes optimized for large streaming workloads where throughput (mea
 Provisioned IOPS SSD (io1) volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads, that are sensitive to storage performance and consistency.
 
 #### AWS Transit Gateway can be used to connect the Amazon VPCs to the on-premises networks.
+
+#### What is better than saving log files on EC2
+
+Installing CloudWatch Logs agents on EC2 to send logs to CloudWatch
+
+#### Amazon Memcached, a high-performance distributed memory cache service, is designed for simplicity while Redis offers a rich set of features that make it effective for a wide range of use cases. Memcached does not offer support for geospatial data.
+
+#### Use AWS DataSync to migrate existing data to Amazon S3 and then use File Gateway to retain access to the migrated data for ongoing updates from the on-premises applications
+
+#### Enable Amazon S3 Transfer Acceleration (Amazon S3TA) for the Amazon S3 bucket. This would speed up uploads as well as downloads for the video files.
+
+#### Use Amazon CloudFront distribution with origin as the Amazon S3 bucket. This would speed up uploads as well as downloads for the video files
