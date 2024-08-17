@@ -359,3 +359,33 @@ Installing CloudWatch Logs agents on EC2 to send logs to CloudWatch
 #### Enable Amazon S3 Transfer Acceleration (Amazon S3TA) for the Amazon S3 bucket. This would speed up uploads as well as downloads for the video files.
 
 #### Use Amazon CloudFront distribution with origin as the Amazon S3 bucket. This would speed up uploads as well as downloads for the video files
+
+#### The Application Load Balancer removes an instance from its pool of healthy instances whenever it is detected as unhealthy but the Auto Scaling group provisions the replacement instance.
+
+It is recommended to use ALB based health checks for both Auto Scaling group and Application Load Balancer.
+
+#### Internet Gateway (IGW) allows instances with public IPs to access the internet. NAT Gateway (NGW) allows instances with no public IPs to access the internet.
+
+#### An encrypted Amazon EBS volume
+
+Data moving between the volume and the instance is encrypted
+Data at rest inside the volume is encrypted
+Any snapshot created from the volume is encrypted
+
+#### Upon inspecting application logs, the team notices several "could not connect to server: connection timed out" error messages.
+
+The security group configuration for the database instance does not have the correct rules to allow inbound connections from the application servers
+
+#### A process replaces an existing object and immediately tries to read it. Amazon S3 always returns the latest version of the object
+
+#### Amazon EBS volumes are Availability Zone (AZ) locked
+
+#### Use a dead-letter queue of SQS to handle message processing failures
+
+Dead-letter queues can be used by other queues (source queues) as a target for messages that can't be processed (consumed) successfully. Dead-letter queues are useful for debugging your application or messaging system because they let you isolate problematic messages to determine why their processing doesn't succeed. Sometimes, messages can’t be processed because of a variety of possible issues, such as when a user comments on a story but it remains unprocessed because the original story itself is deleted by the author while the comments were being posted. In such a case, the dead-letter queue can be used to handle message processing failures.
+
+#### AWS Trusted Advisor is an online tool that draws upon best practices learned from AWS’s aggregated operational history of serving hundreds of thousands of AWS customers.
+
+#### For disaster recovery of the read-heavy database
+
+Use cross-Region Read Replicas and enable the automated backup feature of Amazon RDS in a multi-AZ deployment that creates backups across multiple Regions
