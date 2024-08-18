@@ -389,3 +389,30 @@ Dead-letter queues can be used by other queues (source queues) as a target for m
 #### For disaster recovery of the read-heavy database
 
 Use cross-Region Read Replicas and enable the automated backup feature of Amazon RDS in a multi-AZ deployment that creates backups across multiple Regions
+
+#### When you use AWS WAF with Amazon CloudFront, you can protect your applications running on any HTTP webserver
+
+#### Only Standard Amazon SQS queue is allowed as an Amazon S3 event notification destination, whereas FIFO SQS queue is not allowed
+
+#### By default, cross-zone load balancing is enabled for Application Load Balancer and disabled for Network Load Balancer
+
+#### Amazon Redshift is a fully-managed petabyte-scale cloud-based data warehouse product designed for large scale data set storage and analysis.
+
+Using Amazon Redshift Spectrum, you can efficiently query and retrieve structured and semistructured data from files in Amazon S3 without having to load the data into Amazon Redshift tables.
+
+#### Allowing some connections without blocking all in a country
+
+Use AWS WAF geo match statement listing the countries that you want to block
+Use AWS WAF IP set statement that specifies the IP addresses that you want to allow through
+
+#### Amazon S3 cannot encrypt object metadata by using Server-Side Encryption
+
+#### AWS WAF (w/o Amazon CloudFront) can prevent SQL injection and cross-site scripting attacks.
+
+#### Amazon Athena is an interactive query service that makes it easy to analyze data directly in Amazon S3 using standard SQL.
+
+#### Use AWS transit gateway to interconnect the VPCs
+
+#### Instance store is ideal for the temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers.
+
+#### You can quickly create clones of an Aurora DB by using the database cloning feature. In addition, database cloning uses a copy-on-write protocol, in which data is copied only at the time the data changes, either on the source database or the clone database. Cloning is much faster than a manual snapshot of the DB cluster.
