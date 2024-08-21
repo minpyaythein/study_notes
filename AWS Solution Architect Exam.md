@@ -416,3 +416,17 @@ Use AWS WAF IP set statement that specifies the IP addresses that you want to al
 #### Instance store is ideal for the temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers.
 
 #### You can quickly create clones of an Aurora DB by using the database cloning feature. In addition, database cloning uses a copy-on-write protocol, in which data is copied only at the time the data changes, either on the source database or the clone database. Cloning is much faster than a manual snapshot of the DB cluster.
+
+#### DynamoDB can handle any changes in data attributes over time.
+
+#### By default, all Amazon DynamoDB tables are encrypted using AWS owned keys, which do not write to AWS CloudTrail logs
+
+#### HIPAA compliant in-memory database that supports caching results of SQL queries is ElastiCache for Redis/Memcached.
+
+#### DAX does not support SQL query caching.
+
+#### With Server-Side Encryption with Customer-Provided Keys (SSE-C), you manage the encryption keys and Amazon S3 manages the encryption
+
+#### Network Load Balancer is best suited for use-cases involving low latency and high throughput workloads that involve scaling to millions of requests per second.
+
+####
