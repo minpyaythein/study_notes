@@ -429,4 +429,20 @@ Use AWS WAF IP set statement that specifies the IP addresses that you want to al
 
 #### Network Load Balancer is best suited for use-cases involving low latency and high throughput workloads that involve scaling to millions of requests per second.
 
-####
+#### The CNAME record will be updated to point to the standby database when the primary instance of the Multi-AZ configuration goes down.
+
+#### Internet Gateway to establish internet connectivity
+
+The network access control list (network ACL) associated with the subnet must have rules to allow inbound and outbound traffic
+
+The route table in the instance’s subnet should have a route to an Internet Gateway
+
+#### http://169.254.169.254/latest/meta-data/public-ipv4 to retrieve the instance public IP from within a shell script
+
+#### The company wants a solution where users will be directed to a static error page, configured as a backup, in case of unavailability of the primary website.
+
+Set up Amazon Route 53 active-passive type of failover routing policy. If Amazon Route 53 health check determines the Application Load Balancer endpoint as unhealthy, the traffic will be diverted to a static error page, hosted on Amazon S3 bucket
+
+#### An instance store provides temporary block-level storage for your instance. This storage is located on disks that are physically attached to the host computer. Instance store is ideal for the temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers.
+
+You can specify instance store volumes for an instance only when you launch it. You can't detach an instance store volume from one instance and attach it to a different instance.
