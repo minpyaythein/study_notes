@@ -425,6 +425,10 @@ Use AWS WAF IP set statement that specifies the IP addresses that you want to al
 
 #### DAX does not support SQL query caching.
 
+#### When you use server-side encryption with AWS KMS (SSE-KMS), you can specify a customer-managed CMK that you have already created. SSE-KMS provides you with an audit trail that shows when your CMK was used and by whom.
+
+#### When you use Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3), each object is encrypted with a unique key.
+
 #### With Server-Side Encryption with Customer-Provided Keys (SSE-C), you manage the encryption keys and Amazon S3 manages the encryption
 
 #### Network Load Balancer is best suited for use-cases involving low latency and high throughput workloads that involve scaling to millions of requests per second.
@@ -446,3 +450,29 @@ Set up Amazon Route 53 active-passive type of failover routing policy. If Amazon
 #### An instance store provides temporary block-level storage for your instance. This storage is located on disks that are physically attached to the host computer. Instance store is ideal for the temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers.
 
 You can specify instance store volumes for an instance only when you launch it. You can't detach an instance store volume from one instance and attach it to a different instance.
+
+#### Moving the data to Amazon S3 glacier will prevent us from being able to query it.
+
+#### S3 Intelligent-Tiering storage class works by storing objects in two access tiers: one tier that is optimized for frequent access and another lower-cost tier that is optimized for infrequent access.
+
+#### Service control policy (SCP) is a type of organization policy that you can use to manage permissions in your organization. SCPs offer central control over the maximum available permissions for all accounts in your organization. SCPs help you to ensure your accounts stay within your organization’s access control guidelines.
+
+#### AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
+
+#### Amazon EMR is the industry-leading cloud big data platform for processing vast amounts of data using open source tools such as Apache Spark, Apache Hive, Apache HBase, Apache Flink, Apache Hudi, and Presto.
+
+#### Client-side encryption is the act of encrypting your data locally to help ensure its security in transit and at rest.
+
+#### ElastiCache for Memcached does not support replication and archival snapshots where redis does.
+
+#### To accomplish this, the engineering team has designed the VPC with a public subnet and a private subnet. The team also wants Transport Layer Security (TLS) termination to be offloaded from the Amazon EC2 instances.
+
+Set up a Network Load Balancer in the public subnet. Create an Auto Scaling group in the private subnet and associate it with the Network Load Balancer
+
+NLB has to be accessible over the internet and hence has to be in a public subnet and will act as a single point-of-contact for all incoming traffic.
+
+ALB and NLB also support Transport Layer Security (TLS) offloading. CLB supports SSL offloading.
+
+#### Updates to your DB Instance are synchronously replicated across the Availability Zone to the standby in order to keep both in sync and protect your latest database updates against DB instance failure.
+
+#### Amazon RDS applies operating system updates by performing maintenance on the standby, then promoting the standby to primary and finally performing maintenance on the old primary, which becomes the new standby
