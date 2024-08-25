@@ -149,6 +149,12 @@ Target Tracking Scaling Policy based on a custom Amazon SQS queue metric
 
 #### Dedicated Hosts enable you to use your existing server-bound software licenses like Windows Server and address corporate compliance and regulatory requirements.
 
+#### To run its applications on single-tenant hardware to meet compliance guidelines.
+
+The most cost-effective way of isolating the Amazon EC2 instances to a single tenant is using Dedicated Instances
+
+#### Dedicated Instances may share hardware with other instances from the same AWS account that are not Dedicated Instances.
+
 #### Security Groups can be associated with a NAT instance
 
 #### NAT instance can be used as a bastion server
@@ -476,3 +482,31 @@ ALB and NLB also support Transport Layer Security (TLS) offloading. CLB supports
 #### Updates to your DB Instance are synchronously replicated across the Availability Zone to the standby in order to keep both in sync and protect your latest database updates against DB instance failure.
 
 #### Amazon RDS applies operating system updates by performing maintenance on the standby, then promoting the standby to primary and finally performing maintenance on the old primary, which becomes the new standby
+
+#### A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+
+Instances in your VPC do not require public IP addresses to communicate with resources in the service. Traffic between your VPC and the other service does not leave the Amazon network.
+
+VPC Endpoints are not used on top of Amazon EC2 instances. They're a way to access AWS services privately within your VPC (without using the public internet).
+
+There are two types of VPC endpoints: interface endpoints and gateway endpoints. An interface endpoint is an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service.
+
+A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service. The following AWS services are supported: Amazon S3, Amazon DynamoDB
+
+#### Amazon DynamoDB supports both interface endpoints as well as gateway endpoints. However, to use the interface endpoints, you need to connect to the given services using the private IP address, instead of creating an entry as a target in the route table of the custom VPC.
+
+#### Spot instances are spare Amazon EC2 capacity that can save you up 90% off of On-Demand prices. Spot instances can be interrupted by Amazon EC2 for capacity requirements with a 2-minute notification
+
+#### A Spot fleet can consist of a set of Spot Instances and optionally On-Demand Instances that are launched to meet your target capacity
+
+#### Upgrades to the database engine level require downtime. Even if your Amazon RDS DB instance uses a Multi-AZ deployment, both the primary and standby DB instances are upgraded at the same time. This causes downtime until the upgrade is complete, and the duration of the downtime varies based on the size of your database instance.
+
+#### Your e-commerce application is using an Amazon RDS PostgreSQL database and an analytics workload also runs on the same database. When the analytics workload is run, your e-commerce application slows down which further affects your sales.
+
+Create a Read Replica in the same Region as the Master database and point the analytics workload there
+
+#### An elastic IP address (EIP) can only be attached to one Amazon EC2 instance at a time
+
+#### Create a public Network Load Balancer that links to Amazon EC2 instances that are bastion hosts managed by an Auto Scaling Group
+
+SSH protocol is based on TCP and is layer 4.
