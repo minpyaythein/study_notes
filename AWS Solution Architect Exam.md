@@ -549,4 +549,20 @@ Set up an IAM service role with the appropriate permissions to allow access to t
 
 A service role is an IAM role that a service assumes to perform actions on your behalf. Service roles provide access only within your account and cannot be used to grant access to services in other accounts. An IAM administrator can create, modify, and delete a service role from within IAM. When you create the service role, you define the trusted entity in the definition.
 
-####
+#### Amazon ElastiCache for Memcached supports multi-threading architecture for caching.
+
+#### SSE-S3 and SSE-KMS provide you with an audit trail of when your key was used and by whom. KMS is more expensive.
+
+#### Storage class analysis only provides recommendations for Standard to Standard IA classes
+
+By using Amazon S3 analytics Storage Class Analysis you can analyze storage access patterns to help you decide when to transition the right data to the right storage class.
+
+#### AWS Global Accelerator and Amazon CloudFront are separate services that use the AWS global network and its edge locations around the world. CloudFront improves performance for both cacheable content (such as images and videos) and dynamic content (such as API acceleration and dynamic site delivery), while Global Accelerator improves performance for a wide range of applications over TCP or UDP.
+
+#### AWS Lambda currently supports 1000 concurrent executions per AWS account per region. If your Amazon SNS message deliveries to AWS Lambda contribute to crossing these concurrency quotas, your Amazon SNS message deliveries will be throttled. You need to contact AWS support to raise the account limit.
+
+#### By default, FIFO queues support up to 300 messages per second per batch.
+
+#### Amazon CloudFront does not work in a Amazon Virtual Private Cloud (Amazon VPC)
+
+#### Cost of test file storage on Amazon S3 Standard < Cost of test file storage on Amazon EFS < Cost of test file storage on Amazon EBS
