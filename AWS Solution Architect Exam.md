@@ -566,3 +566,11 @@ By using Amazon S3 analytics Storage Class Analysis you can analyze storage acce
 #### Amazon CloudFront does not work in a Amazon Virtual Private Cloud (Amazon VPC)
 
 #### Cost of test file storage on Amazon S3 Standard < Cost of test file storage on Amazon EFS < Cost of test file storage on Amazon EBS
+
+#### VPC Flow Logs, DNS logs, CloudTrail Logs can be identified as data sources supported by Amazon GuardDuty.
+
+#### A gaming company uses Amazon Aurora as its primary database service. The company has now deployed 5 multi-AZ read replicas to increase the read throughput and for use as failover target. The replicas have been assigned the following failover priority tiers and corresponding instance sizes are given in parentheses: tier-1 (16 terabytes), tier-1 (32 terabytes), tier-10 (16 terabytes), tier-15 (16 terabytes), tier-15 (32 terabytes).
+
+Tier-1 (32-gigs)
+
+#### Cold Hard disk drive (sc1) and Throughput Optimized Hard disk drive (st1) CANNOT be used as boot volumes while creating the instances
