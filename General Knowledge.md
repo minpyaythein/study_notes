@@ -11,3 +11,5 @@ The disk throughput describes how many data may be transferred per second, so th
 Let's consider as the sample the 3000 IOPS and SQL database engine, the block size in terms of db engine is called the page size and for SQL Server it's equal to 8 KB. If you wish to calculate the actual throughput, if the IOPS defined, you will end up with the formula below:
 
 throughput = [IOPS] _ [block size] = 3000 _ 8 = 24 000 KB/s = 24 MB/s
+
+#### While IOPS tell us how many actual operations we can perform per second, throughput tells us how much data can be transferred in the same time. Latency, however, tells us how long we have to wait for this operation to be performed (or finished, depending on what type of latency you're looking for)
