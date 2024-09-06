@@ -196,6 +196,10 @@ Create a read replica and connect the report generation tool or app to it
 
 #### Route 53 charges CNAME records but alias records.
 
+#### CNAME and NS record cannot be used for the top node of the DNS namespace but can be used for other such as from app.covid19survey.com to app.covid19survey.net.
+
+#### Alias record can be used for the top node such as from covid19survey.com to www.covid19survey.com.
+
 #### Amazon SQS lets you decouple application components so that they run and fail independently, increasing the overall fault tolerance of the system.
 
 #### DynamoDB has two read/write capacity modes: on-demand and provisioned.
