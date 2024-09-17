@@ -207,32 +207,6 @@ Create a read replica and connect the report generation tool or app to it
 File Gateway Configuration of AWS Storage Gateway
 Amazon FSx for Windows File Server
 
-#### With cross-zone load balancing enabled, one instance in Availability Zone A receives 20% traffic and four instances in Availability Zone B receive 20% traffic each. With cross-zone load balancing disabled, one instance in Availability Zone A receives 50% traffic and four instances in Availability Zone B receive 12.5% traffic each.
-
-#### Use Amazon DynamoDB point in time recovery to restore the table to the state just before corrupted data was written
-
-#### When you enable PITR, DynamoDB backs up your table data automatically with per-second granularity. Thus, it helps with accidental writes and deletes.
-
-#### Amazon DynamoDB Streams captures a time-ordered sequence of item-level modifications in any Amazon DynamoDB table and stores this information in a log for up to 24 hours.
-
-#### Amazon CloudFront provides two ways to send authenticated requests to an Amazon S3 origin: origin access control (OAC) and origin access identity (OAI).
-
-Configure Amazon CloudFront to send authenticated requests to Amazon S3, and configure Amazon S3 to only allow access to authenticated requests from Amazon CloudFront.
-
-Create an AWS WAF ACL and use an IP match condition to allow traffic only from those IPs that are allowed in the Amazon EC2 security group. Associate this new AWS WAF ACL with the Amazon CloudFront distribution
-
-#### Use AWS Global Accelerator to provide a low latency way to distribute live sports results for UDP connection. (For HTTP connection, CloudFront may be better.)
-
-#### The app is very slow when the business reports are run on RDS DB.
-
-Create a read replica and connect the report generation tool or app to it
-
-#### Read cannot be done from the standby DB.
-
-#### CNAME records can be used to map one domain name to another but not for the top node of a DNS namespace.
-
-#### Route 53 charges CNAME records but alias records.
-
 #### Amazon SQS lets you decouple application components so that they run and fail independently, increasing the overall fault tolerance of the system.
 
 #### DynamoDB has two read/write capacity modes: on-demand and provisioned.
@@ -334,236 +308,6 @@ SNI supports the use of more than one certificate with the same ALB.
 Amazon CloudFront can route to multiple origins based on the content type
 Use an origin group with primary and secondary origins to configure Amazon CloudFront for high-availability and failover
 Use field level encryption in Amazon CloudFront to protect sensitive data for specific content
-
-#### The development team has updated the Amazon Route 53 simple record to point "myapp.mydomain.com" from the old Load Balancer to the new one. The users are still not redirected to the new Load Balancer.
-
-The Time To Live (TTL) is still in effect.
-
-#### A healthcare company is evaluating storage options on Amazon S3 to meet regulatory guidelines. The data should be stored in such a way on Amazon S3 that it cannot be deleted until the regulatory time period has expired.
-
-Use Amazon S3 Object Lock
-Amazon S3 Object Lock is an Amazon S3 feature that allows you to store objects using a write once, read many (WORM) model. You can use WORM protection for scenarios where it is imperative that data is not changed or deleted after it has been written.
-
-#### Amazon S3 Glacier Vault Lock
-
-A vault is a container for storing archives on Glacier. When you create a vault, you specify a vault name and the AWS Region in which you want to create the vault. Since Vault Lock is only for Glacier and not for Amazon S3, so it cannot be used for the given use-case.
-It is for data backup and archival.
-
-#### To whitelist an IP, NLB is useful. To whitelist a DNS or URL, ALB can be used.
-
-#### To transition objects of certain group to S3, a prefix can be used.
-
-#### Both AWS Snowball Edge Storage Optimized and AWS Snowball Edge Compute Optimized offer the storage clustering feature.
-
-#### Amazon EC2 user data cannot be used to install the app.
-
-#### AWS DMS enables you to seamlessly migrate data from supported sources to relational databases, data warehouses, streaming platforms, and other data stores in AWS cloud. It allows to stream the existing data files as well as any ongoing file updates from Amazon S3 to Amazon Kinesis Data Streams.
-
-#### Amazon DynamoDB Streams will contain a stream of all the changes that happen to an Amazon DynamoDB table. It can be chained with an AWS Lambda function that will be triggered to react to these changes, one of which is the developer's milestone.
-
-#### The company wants a dedicated private connection between the on-premise data center and AWS. In case of failures though, the company needs to guarantee uptime and is willing to use the public internet for an encrypted connection.
-
-Use AWS Direct Connect connection as a primary connection and AWS Site-to-Site VPN as a backup connection.
-
-#### IAM database authentication works with MySQL and PostgreSQL. With this authentication method, you don't need to use a password when you connect to a database instance. Instead, you use an authentication token.
-
-#### The bucket policies are for managing permissions for users in their own AWS account and users in other AWS accounts.
-
-#### The user policies are for managing permissions for users in their own AWS account and NOT for users in other AWS accounts.
-
-#### AWS Secrets Manager enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle
-
-#### The database uses AWS Key Management Service (AWS KMS) for encrypting data at rest. SSL is used for data in transit.
-
-#### If you intend to reuse code in more than one AWS Lambda function, you should consider creating an AWS Lambda Layer for the reusable code
-
-#### Since AWS Lambda functions can scale extremely quickly, it's a good idea to deploy a Amazon CloudWatch Alarm that notifies your team when function metrics such as ConcurrentExecutions or Invocations exceeds the expected threshold
-
-#### By default, AWS Lambda functions always operate from an AWS-owned VPC and hence have access to any public internet address or public AWS APIs. Once an AWS Lambda function is VPC-enabled, it will need a route through a Network Address Translation gateway (NAT gateway) in a public subnet to access public resources.
-
-#### A Lambda function should only be VPC-enabled when necessary to interact with a private resource or subnet.
-
-#### Amazon EBS
-
-SSD-backed volumes optimized for transactional workloads involving frequent read/write operations with small I/O size, where the dominant performance attribute is IOPS.
-HDD-backed volumes optimized for large streaming workloads where throughput (measured in MiB/s) is a better performance measure than IOPS.
-Provisioned IOPS SSD (io1) volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads, that are sensitive to storage performance and consistency.
-
-#### AWS Transit Gateway can be used to connect the Amazon VPCs to the on-premises networks.
-
-#### What is better than saving log files on EC2
-
-Installing CloudWatch Logs agents on EC2 to send logs to CloudWatch
-
-#### Amazon Memcached, a high-performance distributed memory cache service, is designed for simplicity while Redis offers a rich set of features that make it effective for a wide range of use cases. Memcached does not offer support for geospatial data.
-
-#### Use AWS DataSync to migrate existing data to Amazon S3 and then use File Gateway to retain access to the migrated data for ongoing updates from the on-premises applications
-
-#### Enable Amazon S3 Transfer Acceleration (Amazon S3TA) for the Amazon S3 bucket. This would speed up uploads as well as downloads for the video files.
-
-#### Use Amazon CloudFront distribution with origin as the Amazon S3 bucket. This would speed up uploads as well as downloads for the video files
-
-#### The Application Load Balancer removes an instance from its pool of healthy instances whenever it is detected as unhealthy but the Auto Scaling group provisions the replacement instance.
-
-It is recommended to use ALB based health checks for both Auto Scaling group and Application Load Balancer.
-
-#### Internet Gateway (IGW) allows instances with public IPs to access the internet. NAT Gateway (NGW) allows instances with no public IPs to access the internet.
-
-#### An encrypted Amazon EBS volume
-
-Data moving between the volume and the instance is encrypted
-Data at rest inside the volume is encrypted
-Any snapshot created from the volume is encrypted
-
-#### Upon inspecting application logs, the team notices several "could not connect to server: connection timed out" error messages.
-
-The security group configuration for the database instance does not have the correct rules to allow inbound connections from the application servers
-
-#### A process replaces an existing object and immediately tries to read it. Amazon S3 always returns the latest version of the object
-
-#### Amazon EBS volumes are Availability Zone (AZ) locked
-
-#### Use a dead-letter queue of SQS to handle message processing failures
-
-Dead-letter queues can be used by other queues (source queues) as a target for messages that can't be processed (consumed) successfully. Dead-letter queues are useful for debugging your application or messaging system because they let you isolate problematic messages to determine why their processing doesn't succeed. Sometimes, messages can’t be processed because of a variety of possible issues, such as when a user comments on a story but it remains unprocessed because the original story itself is deleted by the author while the comments were being posted. In such a case, the dead-letter queue can be used to handle message processing failures.
-
-#### AWS Trusted Advisor is an online tool that draws upon best practices learned from AWS’s aggregated operational history of serving hundreds of thousands of AWS customers.
-
-#### For disaster recovery of the read-heavy database
-
-Use cross-Region Read Replicas and enable the automated backup feature of Amazon RDS in a multi-AZ deployment that creates backups across multiple Regions
-
-#### When you use AWS WAF with Amazon CloudFront, you can protect your applications running on any HTTP webserver
-
-#### Only Standard Amazon SQS queue is allowed as an Amazon S3 event notification destination, whereas
-
-#### Amazon SQS lets you decouple application components so that they run and fail independently, increasing the overall fault tolerance of the system.
-
-#### DynamoDB has two read/write capacity modes: on-demand and provisioned.
-
-#### ELB can be configured for host-based routing to support multiple subdomains and different top-level domains.
-
-#### AWS Site-to-Site VPN connections are used for secure connectivity to its AWS cloud resources from its on-premises DC.
-
-If users are experiencing slower VPN connectivity, AWS Transit Gateway with equal cost multipath routing and add additional VPN tunnels
-
-#### Access control lists (ACLs) are service policies that allow you to control which principals in another account can access a resource.
-
-#### A permissions boundary is an advanced feature for using a managed policy to set the maximum permissions that an identity-based policy can grant to an IAM entity.
-
-#### SCPs are JSON policies that specify the maximum permissions for an organization or organizational unit (OU). The SCP limits permissions for entities in member accounts, including each AWS account root user. An explicit deny in any of these policies overrides the allow.
-
-#### Resource-based policies are JSON policy documents that you attach to a resource such as an Amazon S3 bucket.
-
-#### The IAM service supports only one type of resource-based policy called a role trust policy, which is attached to an IAM role.
-
-#### Trust policies define which principal entities (accounts, users, roles, and federated users) can assume the role. An IAM role is both an identity and a resource that supports resource-based policies.
-
-#### AWS CloudFormation allows you to keep your infrastructure as code and re-use the best practices around your company for configuration parameters.
-
-#### Amazon ElastiCache Redis is used and a disaster recovery strategy for its caching layer that gives minimal downtime and data loss is necessary.
-
-Opt for Multi-AZ configuration with automatic failover functionality to help mitigate failure
-
-#### To facilitate the hosting of Docker containers, the company is looking at various orchestration services.
-
-Amazon EKS and ECS with Fargate for serverless orchestration of the containerized services
-
-#### Select a cluster placement group while launching EC2 instances for high network throughput and low-latency network performance with tightly coupled node-to-node communication.
-
-#### When you create an AWS Elastic Beanstalk environment, you can specify an Amazon Machine Image (AMI) to use instead of the standard Elastic Beanstalk AMI included in your platform version.
-
-Create a Golden Amazon Machine Image (AMI) with the static installation components already setup
-Use Amazon EC2 user data to customize the dynamic installation parts at boot time
-
-#### Disaster Recovery Strategy leveraging AWS Cloud
-
-Multi-Site > Warm Standby > Pilot Light > Backup and Restore
-Backup and Restore: In most traditional environments, data is backed up to tape and sent off-site regularly. If you use this method, it can take a long time to restore your system in the event of a disruption or disaster.
-Pilot Light: The term pilot light is often used to describe a DR scenario in which a minimal version of an environment is always running in the cloud. With AWS you can maintain a pilot light by configuring and running the most critical core elements of your system in AWS.
-Warm Standby: The term warm standby is used to describe a DR scenario in which a scaled-down version of a fully functional environment is always running in the cloud. A warm standby solution extends the pilot light elements and preparation.
-Multi-Site: A multi-site solution runs in AWS as well as on your existing on-site infrastructure, in an active-active configuration.
-
-#### To reduce costs and for read-heavy operations of an app using API Gateway, Lambda and Aurora DB.
-
-You can enable Amazon API caching in Amazon API Gateway to cache your endpoint's responses. With caching, you can reduce the number of calls made to your endpoint and also improve the latency of requests to your API. When you enable caching for a stage, API Gateway caches responses from your endpoint for a specified time-to-live (TTL) period, in seconds.
-
-#### To copy a petabyte of data from on-premises DC to a S3 bucket
-
-Copy data from the source bucket to the destination bucket using the aws S3 sync command
-Set up Amazon S3 batch replication to copy objects across Amazon S3 buckets in another Region using S3 console and then delete the replication configuration
-
-#### Migrating the application consisting of application servers and a Microsoft SQL Server database from on-premises to AWS.
-
-Migrate the data to Amazon RDS for SQL Server database in a Multi-AZ deployment
-
-#### Costs are too high for startup app using EC2 instances, RDS instances and S3.
-
-Use AWS Cost Explorer Resource Optimization to get a report of Amazon EC2 instances that are either idle or have low utilization and use AWS Compute Optimizer to look at instance type recommendations
-
-#### Decoupling the architecture of a SaaS app with in-house and 3rd-party apps.
-
-Use Amazon EventBridge to decouple the system architecture.
-Amazon SQS cannot be integrated with 3rd-party SaaS services.
-
-#### Adding read replicas would further add to the database costs and will not help in reducing latency when compared to a caching solution. Caching is the solution.
-
-#### Across regions have multiple ALBs and it is necessary to allow IP addresses of the ALBs in on-premises.
-
-Use Global Accelerator. Register the Application Load Balancers in different Regions to the AWS Global Accelerator. Configure the on-premises firewall's rule to allow static IP addresses associated with the AWS Global Accelerator
-
-#### Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message brokers in the cloud. Message brokers allow different software systems–often using different programming languages, and on different platforms–to communicate and exchange information.
-
-Connecting your current applications to Amazon MQ is easy because it uses industry-standard APIs and protocols for messaging, including JMS, NMS, AMQP, STOMP, MQTT, and WebSocket.
-
-#### There are two types of VPC endpoints: Interface Endpoints and Gateway Endpoints.
-
-An Interface Endpoint is an Elastic Network Interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service.
-
-A Gateway Endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service. The following AWS services are supported: Amazon S3 and Amazon DynamoDB.
-
-#### Wants a capability to dynamically alter the size of a geographic area from which traffic is routed to a specific server resource.
-
-Geoproximity routing lets Amazon Route 53 route traffic to your resources based on the geographic location of your users and your resources. You can also optionally choose to route more traffic or less to a given resource by specifying a value, known as a bias. A bias expands or shrinks the size of the geographic region from which traffic is routed to a resource.
-
-#### The CTO wants to re-engineer a monolithic app towards microservices architecture and expose their application from the same load balancer, linked to different target groups with different URLs: checkout.mycorp.com, www.mycorp.com, yourcorp.com/profile and yourcorp.com/search. The CTO would like to expose all these URLs as HTTPS endpoints for security purposes.
-
-Use Secure Sockets Layer certificate (SSL certificate) with SNI
-SNI supports the use of more than one certificate with the same ALB.
-
-#### A music-sharing company uses a Network Load Balancer to direct traffic to 5 Amazon EC2 instances managed by an Auto Scaling group. When a very popular song is released, the Auto Scaling Group scales to 100 instances and the company incurs high network and compute fees.
-
-#### Amazon CloudFront
-
-Amazon CloudFront can route to multiple origins based on the content type
-Use an origin group with primary and secondary origins to configure Amazon CloudFront for high-availability and failover
-Use field level encryption in Amazon CloudFront to protect sensitive data for specific content
-
-#### The development team has updated the Amazon Route 53 simple record to point "myapp.mydomain.com" from the old Load Balancer to the new one. The users are still not redirected to the new Load Balancer.
-
-The Time To Live (TTL) is still in effect.
-
-#### A healthcare company is evaluating storage options on Amazon S3 to meet regulatory guidelines. The data should be stored in such a way on Amazon S3 that it cannot be deleted until the regulatory time period has expired.
-
-Use Amazon S3 Object Lock
-Amazon S3 Object Lock is an Amazon S3 feature that allows you to store objects using a write once, read many (WORM) model. You can use WORM protection for scenarios where it is imperative that data is not changed or deleted after it has been written.
-
-#### Amazon S3 Glacier Vault Lock
-
-A vault is a container for storing archives on Glacier. When you create a vault, you specify a vault name and the AWS Region in which you want to create the vault. Since Vault Lock is only for Glacier and not for Amazon S3, so it cannot be used for the given use-case.
-It is for data backup and archival.
-
-#### To whitelist an IP, NLB is useful. To whitelist a DNS or URL, ALB can be used.
-
-#### To transition objects of certain group to S3, a prefix can be used.
-
-#### Both AWS Snowball Edge Storage Optimized and AWS Snowball Edge Compute Optimized offer the storage clustering feature.
-
-#### Amazon EC2 user data cannot be used to install the app.
-
-#### AWS DMS enables you to seamlessly migrate data from supported sources to relational databases, data warehouses, streaming platforms, and other data stores in AWS cloud. It allows to stream the existing data files as well as any ongoing file updates from Amazon S3 to Amazon Kinesis Data Streams.
-
-#### Amazon DynamoDB Streams will contain a stream of all the changes that happen to an Amazon DynamoDB table. It can be chained with an AWS Lambda function that will be triggered to react to these changes, one of which is the developer's milestone.
 
 #### The company wants a dedicated private connection between the on-premise data center and AWS. In case of failures though, the company needs to guarantee uptime and is willing to use the public internet for an encrypted connection.
 
@@ -640,6 +384,32 @@ Use cross-Region Read Replicas and enable the automated backup feature of Amazon
 #### When you use AWS WAF with Amazon CloudFront, you can protect your applications running on any HTTP webserver
 
 #### Only Standard Amazon SQS queue is allowed as an Amazon S3 event notification destination, whereas FIFO SQS queue is not allowed
+
+#### The development team has updated the Amazon Route 53 simple record to point "myapp.mydomain.com" from the old Load Balancer to the new one. The users are still not redirected to the new Load Balancer.
+
+The Time To Live (TTL) is still in effect.
+
+#### A healthcare company is evaluating storage options on Amazon S3 to meet regulatory guidelines. The data should be stored in such a way on Amazon S3 that it cannot be deleted until the regulatory time period has expired.
+
+Use Amazon S3 Object Lock
+Amazon S3 Object Lock is an Amazon S3 feature that allows you to store objects using a write once, read many (WORM) model. You can use WORM protection for scenarios where it is imperative that data is not changed or deleted after it has been written.
+
+#### Amazon S3 Glacier Vault Lock
+
+A vault is a container for storing archives on Glacier. When you create a vault, you specify a vault name and the AWS Region in which you want to create the vault. Since Vault Lock is only for Glacier and not for Amazon S3, so it cannot be used for the given use-case.
+It is for data backup and archival.
+
+#### To whitelist an IP, NLB is useful. To whitelist a DNS or URL, ALB can be used.
+
+#### To transition objects of certain group to S3, a prefix can be used.
+
+#### Both AWS Snowball Edge Storage Optimized and AWS Snowball Edge Compute Optimized offer the storage clustering feature.
+
+#### Amazon EC2 user data cannot be used to install the app.
+
+#### AWS DMS enables you to seamlessly migrate data from supported sources to relational databases, data warehouses, streaming platforms, and other data stores in AWS cloud. It allows to stream the existing data files as well as any ongoing file updates from Amazon S3 to Amazon Kinesis Data Streams.
+
+#### Amazon DynamoDB Streams will contain a stream of all the changes that happen to an Amazon DynamoDB table. It can be chained with an AWS Lambda function that will be triggered to react to these changes, one of which is the developer's milestone.
 
 #### By default, cross-zone load balancing is enabled for Application Load Balancer and disabled for Network Load Balancer
 
@@ -815,3 +585,33 @@ By using Amazon S3 analytics Storage Class Analysis you can analyze storage acce
 Tier-1 (32-gigs)
 
 #### Cold Hard disk drive (sc1) and Throughput Optimized Hard disk drive (st1) CANNOT be used as boot volumes while creating the instances
+
+#### A development team wants to ensure that all objects uploaded to an Amazon S3 bucket are encrypted?
+
+Configure the bucket policy to deny if the PutObject does not have an x-amz-server-side-encryption header set
+
+#### Amazon SQS temporary queues gives a high-throughput request-response message pattern.
+
+#### To run distributed and replicated workloads, partition placement groups of EC2 instances help.
+
+#### Use the Amazon EC2 instances private IP for the affordable replication cost.
+
+#### Increasing the IOPS on the EBS volume results in bigger space and thus, throughput.
+
+#### Amazon EFS with Provisioned Throughput mode does not increase storage size but Bursting Throughput mode does.
+
+#### Use Amazon CloudFront signed URLs and cookies to distribute content only to its service subscribers.
+
+#### Provisioned IOPS SSD EBS volumes allow to set up shared data access for EC2 instances.
+
+#### Snowmobile should be used for 10 petabytes unit.
+
+#### Snowball is for under 10 terabytes.
+
+#### DR strategy for monolith app
+
+An autoscaling group that spans across 2 AZs which min=1, max=1, desired=1
+Use EIP and EC2 user data script to attach
+Assign an EC2 Instance Role to perform API calls
+
+#### Create an OAI and update S3 bucket policy to let users access to S3 only through CloudFront
