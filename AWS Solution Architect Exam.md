@@ -40,7 +40,7 @@ AWS Global Accelerator and create endpoints for all the Regions, connecting to A
 
 #### The application will be accessed by users from different geographic regions of the world to upload and download video files that can reach a maximum size of 10 gigabytes.
 
-(For smaller than 1GB) Use Amazon S3 for hosting the web application and use Amazon S3 Transfer Acceleration (Amazon S3TA) to reduce the latency that geographically dispersed users might face
+(For larger than 1GB) Use Amazon S3 for hosting the web application and use Amazon S3 Transfer Acceleration (Amazon S3TA) to reduce the latency that geographically dispersed users might face
 (For smaller than 1GB) Use Amazon S3 for hosting the web application and use Amazon CloudFront for faster distribution of content to geographically dispersed users
 
 #### A cost-effective serverless solution for its flagship application that has both static and dynamic content
@@ -615,6 +615,48 @@ Use EIP and EC2 user data script to attach
 Assign an EC2 Instance Role to perform API calls
 
 #### Create an OAI and update S3 bucket policy to let users access to S3 only through CloudFront
+
+#### When your object size reaches 100 megabytes, you should consider using multipart uploads instead of uploading the object in a single operation.
+
+#### Ingest the data in Amazon Kinesis Data Firehose and use an intermediary AWS Lambda function to filter and transform the incoming stream before the output is dumped on Amazon S3
+
+#### FSx for Lustre provides the ability to both process the 'hot data' in a parallel and distributed fashion as well as easily store the 'cold data' on Amazon S3.
+
+#### Kinesis Data Firehose cannot directly write into a DynamoDB table.
+
+#### Kinesis Data Streams cannot directly write the output to Amazon S3 but Firehose can.
+
+#### AWS DMS enables you to seamlessly migrate data from supported sources to relational databases, data warehouses, streaming platforms, and other data stores in AWS cloud.
+
+Leverage AWS Database Migration Service (AWS DMS) as a bridge between Amazon S3 and Amazon Kinesis Data Streams
+
+#### Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and AWS Lambda functions.
+
+If your application is composed of several individual services, an Application Load Balancer can route a request to a service based on the content of the request. Here are the different types -
+
+Host-based Routing:
+
+You can route a client request based on the Host field of the HTTP header allowing you to route to multiple domains from the same load balancer.
+
+Path-based Routing:
+
+You can route a client request based on the URL path of the HTTP header.
+
+HTTP header-based routing:
+
+You can route a client request based on the value of any standard or custom HTTP header.
+
+HTTP method-based routing:
+
+You can route a client request based on any standard or custom HTTP method.
+
+Query string parameter-based routing:
+
+You can route a client request based on the query string or query parameters.
+
+Source IP address CIDR-based routing:
+
+You can route a client request based on source IP address CIDR from where the request originates.
 
 #### Common Port Numbers
 
