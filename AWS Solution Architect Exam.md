@@ -630,6 +630,8 @@ Assign an EC2 Instance Role to perform API calls
 
 Leverage AWS Database Migration Service (AWS DMS) as a bridge between Amazon S3 and Amazon Kinesis Data Streams
 
+#### If you need to scale your AWS Site-to-Site VPN connection beyond 1.25 Gbps while managing traffic between multiple VPCs and your on-premises network, AWS Transit Gateway with ECMP is a scalable and manageable solution.
+
 #### Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and AWS Lambda functions.
 
 If your application is composed of several individual services, an Application Load Balancer can route a request to a service based on the content of the request. Here are the different types -
