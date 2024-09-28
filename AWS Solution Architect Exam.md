@@ -634,6 +634,8 @@ Leverage AWS Database Migration Service (AWS DMS) as a bridge between Amazon S3 
 
 #### Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and AWS Lambda functions.
 
+#### The S3 Glacier Instant Retrieval storage class delivers milliseconds retrieval for archives that need immediate access, such as medical images or news media assets. S3 Glacier Flexible Retrieval provides three retrieval options: expedited retrievals that typically complete in 1–5 minutes, standard retrievals that typically complete in 3–5 hours and start within minutes when initiated using S3 Batch Operations, and free bulk retrievals that return large amounts of data typically in 5–12 hours. The Amazon S3 Glacier Deep Archive storage class provides two retrieval options ranging from 12-48 hours.
+
 If your application is composed of several individual services, an Application Load Balancer can route a request to a service based on the content of the request. Here are the different types -
 
 Host-based Routing:
